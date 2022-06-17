@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: my-webapp-JK
-  name: my-webapp-JK
+    app: my-webapp-jk
+  name: my-webapp-jk
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-webapp-JK
+      app: my-webapp-jk
   template:
     metadata:
       labels:
-        app: my-webapp-JK
+        app: my-webapp-jk
     spec:
       containers:
       - image: gcr.io/manifest-pride-351714/my-webapp:latest
@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-webapp-JK
+  name: my-webapp-svc
 spec:
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
   selector:
-    app: my-webapp-JK
+    app: my-webapp-jk
   type: LoadBalancer
