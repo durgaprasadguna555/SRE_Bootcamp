@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - image: gcr.io/manifest-pride-351714/my-webapp:latest
-        name: my-webapp
+        name: my-webapp-jk
         ports:
         - containerPort: 80
           protocol: TCP
