@@ -4,20 +4,20 @@ pipeline {
         registry = "gcr.io/manifest-pride-351714/my-webapp"
         //- update your credentials ID after creating credentials for connecting to GCR
         registryCredential = "My First Project"
-        IMAGE_REPO_NAME="mypipeline"
+        IMAGE_REPO_NAME="my-webapp"
         IMAGE_TAG="latest"
         REPOSITORY_URI = "gcr.io/manifest-pride-351714/my-webapp/${IMAGE_REPO_NAME}"
         dockerImage = ""
         PROJECT_ID = 'manifest-pride-351714'
         CLUSTER_NAME = 'my-gke-cluster'
         LOCATION = 'us-central1-a'
-        CREDENTIALS_ID = 'My First Project'
+        CREDENTIALS_ID = 
     }
     stages {
 
         stage ('checkout') {
             steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/durgaprasadguna555/SRE_Bootcamp.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/SRE_Bootcamp']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/durgaprasadguna555/SRE_Bootcamp.git']]])
             }
         }
        
