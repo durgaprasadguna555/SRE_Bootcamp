@@ -4,7 +4,7 @@ pipeline {
         registry = "gcr.io/manifest-pride-351714/my-webapp"
         IMAGE_REPO_NAME="my-webapp"
         IMAGE_TAG="latest"
-        REPOSITORY_URI = "gcr.io/manifest-pride-351714/my-webapp/"
+        REPOSITORY_URI = "gcr.io/manifest-pride-351714/my-webapp"
         dockerImage = ""
         PROJECT_ID = 'manifest-pride-351714'
         CLUSTER_NAME = 'my-gke-cluster'
