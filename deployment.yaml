@@ -1,9 +1,10 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: my-webapp-jk
-    name: my-webapp-jk
+  name: my-webapp-jk
 spec:
   replicas: 3
   selector:
@@ -20,7 +21,7 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
-        
+---       
 apiVersion: v1
 kind: Service
 metadata:
